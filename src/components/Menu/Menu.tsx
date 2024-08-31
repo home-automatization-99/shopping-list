@@ -45,7 +45,7 @@ const Menu: FC<MenuProps> = ({ daysMenu }) => {
                         );
                       })}
                     </div>
-                    {dish.imagePath && <img src={dish.imagePath} width={400} />}
+                    {dish.imagePath && <img src={dish.imagePath} width={350} />}
                   </div>
                 </details>
               </div>
