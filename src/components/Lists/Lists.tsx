@@ -44,7 +44,7 @@ const Lists: FC<ListsProps> = ({ lists, daysMenu }) => {
           flexDirection: 'column',
           gap: '12px',
           marginBottom: '16px',
-          minWidth: '400px',
+          minWidth: '300px',
         }}
       >
         <Select
