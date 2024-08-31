@@ -50,6 +50,7 @@ const List: FC<ListProps> = ({ listByCategory, id: listId }) => {
                   textDecoration: checkedIds?.includes(ingredientId)
                     ? 'line-through'
                     : 'none',
+                  padding: '10px 13px',
                 }}
               >
                 {ingredient.name} - {Number(quantity)} {ingredient.unit}
