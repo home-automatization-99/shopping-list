@@ -15,10 +15,10 @@ export interface DishWithQuantity {
 
 export interface DayMenu {
   day: Day;
-  dishes: DishWithQuantity;
+  dishes: DishWithQuantity[];
 }
 
-export const daysMenu = [
+export const daysMenu: DayMenu[] = [
   {
     day: Day.Monday,
     dishes: [
