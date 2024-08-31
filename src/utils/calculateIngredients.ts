@@ -8,8 +8,8 @@ const calculateIngredients = (daysMenu: DayMenu[]): Record<number, number> =>
       if (dish) {
         dish.ingredients.forEach((ingredient) => {
           acc[ingredient.productId] =
-            (acc[ingredient.productId] ?? 0) +
-            ingredient.quantity * dishInMenu.quantity;
+            Number(acc[ingredient.productId] ?? 0) +
+            Number(ingredient.quantity) * Number(dishInMenu.quantity);
         });
       }
     });

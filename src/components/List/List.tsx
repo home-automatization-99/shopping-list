@@ -65,6 +65,7 @@ const List: FC<ListProps> = ({ listByCategory, id: listId }) => {
             );
             return ingredient !== undefined && ingredient.name.includes(filter);
           }}
+          virtualized={false}
         />
       </div>
     );
