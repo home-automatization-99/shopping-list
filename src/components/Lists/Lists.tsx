@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 import getIngredientsForDays from '../../utils/getIngredientsForDays';
 import calculateIngredients from '../../utils/calculateIngredients';
@@ -29,6 +29,12 @@ const Lists: FC<ListsProps> = ({ lists, daysMenu }) => {
     selectedCategory ?? Category.EggsAndMilk,
   ]);
 
+  useEffect(() => {
+    if (selectedCategory && !allowedCategories.includes(selectedCategory)) {
+      setSelectedCategory(allowedCategories[0]);
+    }
+  }, [allowedCategories, selectedCategory, setSelectedCategory]);
+
   return (
     <>
       <h1>Списки</h1>
@@ -37,9 +43,12 @@ const Lists: FC<ListsProps> = ({ lists, daysMenu }) => {
           display: 'flex',
           flexDirection: 'column',
           gap: '12px',
+          marginBottom: '16px',
+          minWidth: '400px',
         }}
       >
         <Select
+          size="l"
           value={listId ? [String(listId)] : []}
           options={[
             ...lists.map((listItem) => ({
@@ -50,6 +59,7 @@ const Lists: FC<ListsProps> = ({ lists, daysMenu }) => {
           onUpdate={(value) => setListId(value[0])}
         />
         <Select
+          size="l"
           value={selectedCategory ? [selectedCategory] : []}
           options={allowedCategories.map((item) => ({
             value: item,
