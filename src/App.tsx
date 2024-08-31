@@ -29,6 +29,7 @@ function App() {
           },
         ]}
         onUpdate={setPage}
+        style={{ marginBottom: '16px' }}
       />
       {page === Page.Menu && <Menu daysMenu={daysMenu} />}
       {page === Page.Lists && <Lists lists={lists} daysMenu={daysMenu} />}

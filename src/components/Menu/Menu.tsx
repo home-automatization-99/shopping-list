@@ -4,27 +4,31 @@ import { products } from '../../products';
 import { MenuProps } from './Menu.types';
 
 const Menu: FC<MenuProps> = ({ daysMenu }) => {
-  return (
-    <>
-      <h1>Меню</h1>
-      {daysMenu.map((day) => {
-        return (
-          <div key={day.day}>
-            <h2>{day.day}</h2>
-            <div>
-              {day.dishes.map((dishInMenu) => {
-                const dish = dishes.find(
-                  (item) => item.id === dishInMenu.dishId
-                );
-                if (!dish) {
-                  return null;
-                }
-                return (
-                  <div key={dishInMenu.dishId}>
-                    <details>
-                      <summary>
-                        {dish.name} - порции {dishInMenu.quantity}
-                      </summary>
+  return daysMenu.map((day) => {
+    return (
+      <div key={day.day}>
+        <h2>{day.day}</h2>
+        <div>
+          {day.dishes.map((dishInMenu) => {
+            const dish = dishes.find((item) => item.id === dishInMenu.dishId);
+            if (!dish) {
+              return null;
+            }
+            return (
+              <div key={dishInMenu.dishId}>
+                <details>
+                  <summary>
+                    {dish.name} - порции {dishInMenu.quantity}
+                  </summary>
+
+                  <div
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'row',
+                      flexWrap: 'wrap',
+                    }}
+                  >
+                    <div style={{ flexGrow: '1' }}>
                       {dish.ingredients.map((ingredient) => {
                         if (!ingredient) {
                           return;
@@ -40,15 +44,16 @@ const Menu: FC<MenuProps> = ({ daysMenu }) => {
                           </p>
                         );
                       })}
-                    </details>
+                    </div>
+                    {dish.imagePath && <img src={dish.imagePath} width={400} />}
                   </div>
-                );
-              })}
-            </div>
-          </div>
-        );
-      })}
-    </>
-  );
+                </details>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  });
 };
 export default Menu;

@@ -1,7 +1,27 @@
+import BananUrl from './assets/banan.jpg';
+import KotletiUrl from './assets/kotleti.jpg';
+import KapustaUrl from './assets/kapusta.jpg';
+import KinoaUrl from './assets/kinoa kasha.jpg';
+import CurryUrl from './assets/curry.jpg';
+import LososOladi from './assets/losos oladi.jpg';
+import Pibimpap from './assets/pibimpap.jpg';
+import SalatTuna from './assets/tuna.jpg';
+import kinoaYabloki from './assets/kinoa s yablokami.jpg';
+import Nut from './assets/nut salat.jpg';
+import Tortilya from './assets/tortilya.jpg';
+import Paelya from './assets/paelya.jpg';
+import Backlagan from './assets/baklajan.jpg';
+import Graten from './assets/graten.jpg';
+import Losos from './assets/losos.jpg';
+import Nopolitansky from './assets/neopolitansky.jpg';
+import Sup from './assets/sup.jpg';
+import Perec from './assets/perec.jpg';
+
 export interface Dish {
   id: number;
   name: string;
   ingredients: ProductWithQuantity[];
+  imagePath?: string;
 }
 
 export interface ProductWithQuantity {
@@ -14,6 +34,7 @@ export const dishes: Dish[] = [
   {
     id: 1,
     name: 'Банановые оладьи с йогуртом и кокосом',
+    imagePath: BananUrl,
     ingredients: [
       {
         productId: 1, // Яйцо
@@ -55,6 +76,7 @@ export const dishes: Dish[] = [
   {
     id: 2,
     name: 'Куриные котлеты с булгуром и овощами',
+    imagePath: KotletiUrl,
     ingredients: [
       {
         productId: 10, // Булгур
@@ -111,6 +133,7 @@ export const dishes: Dish[] = [
   {
     id: 3,
     name: 'Цветная капуста с пармезаном',
+    imagePath: KapustaUrl,
     ingredients: [
       {
         productId: 19, // Цветная капуста
@@ -162,6 +185,7 @@ export const dishes: Dish[] = [
   {
     id: 4,
     name: 'Каша из киноа с томатом, сыром и зеленью',
+    imagePath: KinoaUrl,
     ingredients: [
       {
         productId: 24, // Киноа
@@ -193,6 +217,7 @@ export const dishes: Dish[] = [
   {
     id: 5,
     name: 'Карри с яблоками и нутом',
+    imagePath: CurryUrl,
     ingredients: [
       {
         productId: 29, // Яблоко
@@ -264,6 +289,7 @@ export const dishes: Dish[] = [
   {
     id: 6,
     name: 'Овощные оладьи с лососем',
+    imagePath: LososOladi,
     ingredients: [
       {
         productId: 35, // Картофель
@@ -320,6 +346,7 @@ export const dishes: Dish[] = [
   {
     id: 7,
     name: 'Пибимпап',
+    imagePath: Pibimpap,
     ingredients: [
       {
         productId: 13, // Морковь
@@ -405,6 +432,7 @@ export const dishes: Dish[] = [
   {
     id: 8,
     name: 'Салат с тунцом и фасолью',
+    imagePath: SalatTuna,
     ingredients: [
       {
         productId: 46, // Белая фасоль консервированная
@@ -456,6 +484,7 @@ export const dishes: Dish[] = [
   {
     id: 9,
     name: 'Киноа с грецкими орехами, яблоком, корицей и семенами чиа',
+    imagePath: kinoaYabloki,
     ingredients: [
       {
         productId: 24, // Киноа
@@ -492,6 +521,7 @@ export const dishes: Dish[] = [
   {
     id: 10,
     name: 'Салат с нутом, кукурузой и творогом',
+    imagePath: Nut,
     ingredients: [
       {
         productId: 51, // Шампиньоны
@@ -553,6 +583,7 @@ export const dishes: Dish[] = [
   {
     id: 11,
     name: 'Тортилья с курицей',
+    imagePath: Tortilya,
     ingredients: [
       {
         productId: 56, // Тортилья
@@ -604,6 +635,7 @@ export const dishes: Dish[] = [
   {
     id: 12,
     name: 'Паэлья',
+    imagePath: Paelya,
     ingredients: [
       {
         productId: 59, // Мидии
@@ -674,6 +706,7 @@ export const dishes: Dish[] = [
   {
     id: 13,
     name: 'Салат с жареным баклажаном и перцем',
+    imagePath: Backlagan,
     ingredients: [
       {
         productId: 62, // Баклажан
@@ -740,6 +773,7 @@ export const dishes: Dish[] = [
   {
     id: 14,
     name: 'Гратен с курицей и шампиньонами',
+    imagePath: Graten,
     ingredients: [
       {
         productId: 67, // Картофель
@@ -804,6 +838,7 @@ export const dishes: Dish[] = [
   {
     id: 15,
     name: 'Лосось на подушке из овощей и риса',
+    imagePath: Losos,
     ingredients: [
       {
         productId: 69, // Филе лосося
@@ -859,6 +894,7 @@ export const dishes: Dish[] = [
   {
     id: 16,
     name: 'Салат по-неаполитански',
+    imagePath: Nopolitansky,
     ingredients: [
       {
         productId: 72, // Красный лук
@@ -914,6 +950,7 @@ export const dishes: Dish[] = [
   {
     id: 18,
     name: 'Чечевичный суп с мятой',
+    imagePath: Sup,
     ingredients: [
       {
         productId: 79, // Красная чечевица
@@ -970,6 +1007,7 @@ export const dishes: Dish[] = [
   {
     id: 19,
     name: 'Фаршированный перец',
+    imagePath: Perec,
     ingredients: [
       {
         productId: 15, // Болгарский перец

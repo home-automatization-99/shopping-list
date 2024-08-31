@@ -58,7 +58,6 @@ const List: FC<ListProps> = ({ listByCategory, id: listId }) => {
             );
           }}
           onItemClick={onItemClick}
-          itemsHeight={1000}
           filterItem={(filter) => (item) => {
             const ingredient = products.find(
               (product) => String(product.id) === String(item[0])

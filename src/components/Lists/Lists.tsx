@@ -37,14 +37,13 @@ const Lists: FC<ListsProps> = ({ lists, daysMenu }) => {
 
   return (
     <>
-      <h1>Списки</h1>
       <div
         style={{
           display: 'flex',
           flexDirection: 'column',
           gap: '12px',
           marginBottom: '16px',
-          minWidth: '300px',
+          minWidth: '350px',
         }}
       >
         <Select
@@ -56,6 +55,7 @@ const Lists: FC<ListsProps> = ({ lists, daysMenu }) => {
               content: listItem.name,
             })),
           ]}
+          popupWidth={'fit'}
           onUpdate={(value) => setListId(value[0])}
         />
         <Select
