@@ -119,13 +119,13 @@ export const products: Product[] = [
     id: 17,
     name: 'Соль',
     category: Category.Spices,
-    unit: 'цепотки',
+    unit: 'щепотки',
   },
   {
     id: 18,
     name: 'Перец',
     category: Category.Spices,
-    unit: 'щупотки',
+    unit: 'щепотки',
   },
   {
     id: 19,
@@ -523,5 +523,17 @@ export const products: Product[] = [
     name: 'Зеленый горошек',
     category: Category.Cans,
     unit: 'ст.л.',
+  },
+  {
+    id: 86,
+    name: 'Тыква',
+    category: Category.Vegetables,
+    unit: 'шт',
+  },
+  {
+    id: 87,
+    name: 'Семечки подсолнечника или тыквы',
+    category: Category.Nuts,
+    unit: 'ч.л.',
   },
 ];

@@ -16,11 +16,13 @@ import Losos from './assets/losos.jpg';
 import Nopolitansky from './assets/neopolitansky.jpg';
 import Sup from './assets/sup.jpg';
 import Perec from './assets/perec.jpg';
+import Tefteli from './assets/tefteli.jpg';
 
 export interface Dish {
   id: number;
   name: string;
   ingredients: ProductWithQuantity[];
+  calories: number;
   imagePath?: string;
 }
 
@@ -72,6 +74,7 @@ export const dishes: Dish[] = [
         unit: 'г',
       },
     ],
+    calories: 650,
   },
   {
     id: 2,
@@ -129,6 +132,7 @@ export const dishes: Dish[] = [
         unit: 'щепотка',
       },
     ],
+    calories: 435,
   },
   {
     id: 3,
@@ -181,6 +185,7 @@ export const dishes: Dish[] = [
         unit: 'щепотка',
       },
     ],
+    calories: 387,
   },
   {
     id: 4,
@@ -213,6 +218,7 @@ export const dishes: Dish[] = [
         unit: 'г',
       },
     ],
+    calories: 446,
   },
   {
     id: 5,
@@ -285,6 +291,7 @@ export const dishes: Dish[] = [
         unit: 'щепотка',
       },
     ],
+    calories: 487,
   },
   {
     id: 6,
@@ -342,6 +349,7 @@ export const dishes: Dish[] = [
         unit: 'щепотка',
       },
     ],
+    calories: 582,
   },
   {
     id: 7,
@@ -428,6 +436,7 @@ export const dishes: Dish[] = [
         quantity: 0.33,
       },
     ],
+    calories: 497,
   },
   {
     id: 8,
@@ -480,6 +489,7 @@ export const dishes: Dish[] = [
         unit: 'щепотка',
       },
     ],
+    calories: 200,
   },
   {
     id: 9,
@@ -517,6 +527,7 @@ export const dishes: Dish[] = [
         unit: 'ч.л.',
       },
     ],
+    calories: 769,
   },
   {
     id: 10,
@@ -579,6 +590,7 @@ export const dishes: Dish[] = [
         unit: 'щепотка',
       },
     ],
+    calories: 261,
   },
   {
     id: 11,
@@ -631,6 +643,7 @@ export const dishes: Dish[] = [
         unit: 'щепотка',
       },
     ],
+    calories: 593,
   },
   {
     id: 12,
@@ -702,6 +715,7 @@ export const dishes: Dish[] = [
         unit: 'щепотка',
       },
     ],
+    calories: 452,
   },
   {
     id: 13,
@@ -769,6 +783,7 @@ export const dishes: Dish[] = [
         unit: 'щепотка',
       },
     ],
+    calories: 156,
   },
   {
     id: 14,
@@ -834,6 +849,7 @@ export const dishes: Dish[] = [
         quantity: 30,
       },
     ],
+    calories: 700,
   },
   {
     id: 15,
@@ -890,6 +906,7 @@ export const dishes: Dish[] = [
         quantity: 1,
       },
     ],
+    calories: 465,
   },
   {
     id: 16,
@@ -946,6 +963,7 @@ export const dishes: Dish[] = [
         quantity: 5,
       },
     ],
+    calories: 283,
   },
   {
     id: 18,
@@ -1003,6 +1021,7 @@ export const dishes: Dish[] = [
         unit: 'щепотка',
       },
     ],
+    calories: 212,
   },
   {
     id: 19,
@@ -1053,6 +1072,55 @@ export const dishes: Dish[] = [
         productId: 18, // Перец
         quantity: 1, // Примерное значение
         unit: 'щепотка',
+      },
+    ],
+    calories: 362,
+  },
+  {
+    id: 20,
+    name: 'Куриные тефтели с тыквой',
+    imagePath: Tefteli,
+    calories: 320,
+    ingredients: [
+      {
+        productId: 11,
+        quantity: 120,
+      },
+      {
+        productId: 12,
+        quantity: 0.25,
+      },
+      {
+        productId: 86,
+        quantity: 0.25,
+      },
+      {
+        productId: 28,
+        quantity: 50,
+      },
+      {
+        productId: 87,
+        quantity: 1,
+      },
+      {
+        productId: 47,
+        quantity: 2,
+      },
+      {
+        productId: 3,
+        quantity: 1,
+      },
+      {
+        productId: 21, // Оливковое масло
+        quantity: 1,
+      },
+      {
+        productId: 17, // Соль
+        quantity: 1, // Примерное значение
+      },
+      {
+        productId: 18, // Перец
+        quantity: 1, // Примерное значение
       },
     ],
   },
