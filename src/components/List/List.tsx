@@ -1,19 +1,15 @@
 import { FC } from 'react';
-import { List as ListComponent } from '@gravity-ui/uikit';
+import { Button, List as ListComponent } from '@gravity-ui/uikit';
 import { ListProps } from './List.types';
 import { products } from '../../products';
 import { useLocalStorage } from 'react-use';
 
 const List: FC<ListProps> = ({ listByCategory, id: listId }) => {
-  const [checkedIds, setCheckedIds] = useLocalStorage<string[]>(
-    `checked${listId}`,
-    []
-  );
+  const [checkedIds, setCheckedIds, removeCheckedIds] = useLocalStorage<
+    string[]
+  >(`checked${listId}`, []);
 
   const onItemClick = (item: [string, number]) => {
-    console.log(item);
-    console.log(checkedIds);
-
     const id = item[0];
     if (!checkedIds) {
       setCheckedIds([id]);
@@ -66,6 +62,9 @@ const List: FC<ListProps> = ({ listByCategory, id: listId }) => {
           }}
           virtualized={false}
         />
+        <Button style={{ marginTop: '4px' }} onClick={() => removeCheckedIds()}>
+          Очистить все
+        </Button>
       </div>
     );
   });
