@@ -604,7 +604,7 @@ export const dishes: Dish[] = [
       },
       {
         productId: 68, // Курица
-        quantity: 2,
+        quantity: 1,
         unit: "шт",
       },
       {

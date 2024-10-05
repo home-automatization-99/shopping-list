@@ -171,7 +171,7 @@ const daysMenu3: DayMenu[] = [
     dishes: [
       { dishId: 22, quantity: 2 },
       { dishId: 15, quantity: 2, fromFridge: true },
-      { dishId: 7, quantity: 1 },
+      { dishId: 7, quantity: 2 },
     ],
   },
   {
@@ -179,7 +179,7 @@ const daysMenu3: DayMenu[] = [
     dishes: [
       { dishId: 4, quantity: 2 },
       { dishId: 5, quantity: 2 },
-      { dishId: 7, quantity: 1, fromFridge: true },
+      { dishId: 7, quantity: 2, fromFridge: true },
     ],
   },
   {
