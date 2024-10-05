@@ -1,16 +1,17 @@
 export enum Day {
-  Monday = 'Понедельник',
-  Tuesday = 'Вторник',
-  Wednesday = 'Среда',
-  Thursday = 'Четверг',
-  Friday = 'Пятница',
-  Saturday = 'Суббота',
-  Sunday = 'Воскресенье',
+  Monday = "Понедельник",
+  Tuesday = "Вторник",
+  Wednesday = "Среда",
+  Thursday = "Четверг",
+  Friday = "Пятница",
+  Saturday = "Суббота",
+  Sunday = "Воскресенье",
 }
 
 export interface DishWithQuantity {
   dishId: number;
   quantity: number;
+  fromFridge?: boolean;
 }
 
 export interface DayMenu {
@@ -136,4 +137,58 @@ const daysMenu2: DayMenu[] = [
   },
 ];
 
-export const daysMenu = daysMenu2 || daysMenu1;
+const daysMenu3: DayMenu[] = [
+  {
+    day: Day.Saturday,
+    dishes: [{ dishId: 11, quantity: 2 }],
+  },
+  {
+    day: Day.Sunday,
+    dishes: [
+      { dishId: 1, quantity: 2 },
+      { dishId: 18, quantity: 2 },
+      { dishId: 11, quantity: 2, fromFridge: true },
+    ],
+  },
+  {
+    day: Day.Monday,
+    dishes: [
+      { dishId: 4, quantity: 2 },
+      { dishId: 18, quantity: 2, fromFridge: true },
+      { dishId: 2, quantity: 2 },
+    ],
+  },
+  {
+    day: Day.Tuesday,
+    dishes: [
+      { dishId: 21, quantity: 2 },
+      { dishId: 15, quantity: 2 },
+      { dishId: 2, quantity: 2, fromFridge: true },
+    ],
+  },
+  {
+    day: Day.Wednesday,
+    dishes: [
+      { dishId: 22, quantity: 2 },
+      { dishId: 15, quantity: 2, fromFridge: true },
+      { dishId: 7, quantity: 1 },
+    ],
+  },
+  {
+    day: Day.Thursday,
+    dishes: [
+      { dishId: 4, quantity: 2 },
+      { dishId: 5, quantity: 2 },
+      { dishId: 7, quantity: 1, fromFridge: true },
+    ],
+  },
+  {
+    day: Day.Friday,
+    dishes: [
+      { dishId: 21, quantity: 2 },
+      { dishId: 5, quantity: 2, fromFridge: true },
+    ],
+  },
+];
+
+export const daysMenu = daysMenu3 || daysMenu2 || daysMenu1;

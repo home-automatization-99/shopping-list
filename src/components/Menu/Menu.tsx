@@ -1,8 +1,11 @@
-import { FC } from 'react';
-import { dishes } from '../../dishes';
-import { products } from '../../products';
-import { MenuProps } from './Menu.types';
-import { Label } from '@gravity-ui/uikit';
+import { FC } from "react";
+import { Label } from "@gravity-ui/uikit";
+
+import { dishes } from "../../dishes";
+
+import Dish from "../Dish";
+
+import { MenuProps } from "./Menu.types";
 
 const Menu: FC<MenuProps> = ({ daysMenu }) => {
   return daysMenu.map((day) => {
@@ -14,11 +17,11 @@ const Menu: FC<MenuProps> = ({ daysMenu }) => {
     return (
       <div key={day.day}>
         <h2>
-          {day.day}{' '}
+          {day.day}{" "}
           <Label
             size="s"
             theme={
-              allCalories >= 1200 && allCalories <= 1600 ? 'success' : 'warning'
+              allCalories >= 1200 && allCalories <= 1600 ? "success" : "warning"
             }
           >
             {allCalories} ккал
@@ -30,40 +33,27 @@ const Menu: FC<MenuProps> = ({ daysMenu }) => {
             if (!dish) {
               return null;
             }
+            const title = (
+              <>
+                {dish.name} <Label size="xs">{dish.calories} ккал</Label> -
+                порции {dishInMenu.quantity}
+              </>
+            );
+            if (dishInMenu.fromFridge) {
+              return (
+                <div style={{ marginBottom: "4px" }}>
+                  <Label theme="info" size="xs">
+                    Из холодильника
+                  </Label>{" "}
+                  {title}
+                </div>
+              );
+            }
             return (
-              <div key={dishInMenu.dishId}>
-                <details style={{ marginBottom: '4px' }}>
-                  <summary style={{ cursor: 'pointer' }}>
-                    {dish.name} <Label size="xs">{dish.calories} ккал</Label> -
-                    порции {dishInMenu.quantity}
-                  </summary>
-
-                  <div
-                    style={{
-                      display: 'flex',
-                      flexDirection: 'row',
-                      flexWrap: 'wrap',
-                    }}
-                  >
-                    <div style={{ flexGrow: '1' }}>
-                      {dish.ingredients.map((ingredient) => {
-                        if (!ingredient) {
-                          return;
-                        }
-                        const product = products.find(
-                          (item) => item.id === ingredient.productId
-                        );
-                        if (!product) return;
-                        return (
-                          <p key={ingredient.productId}>
-                            {product.name}, {product.unit} -{' '}
-                            {ingredient.quantity} {ingredient.unit}
-                          </p>
-                        );
-                      })}
-                    </div>
-                    {dish.imagePath && <img src={dish.imagePath} width={350} />}
-                  </div>
+              <div key={dishInMenu.dishId} style={{ marginBottom: "4px" }}>
+                <details>
+                  <summary style={{ cursor: "pointer" }}>{title}</summary>
+                  <Dish dish={dish} />
                 </details>
               </div>
             );

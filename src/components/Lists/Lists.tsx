@@ -1,21 +1,21 @@
-import { FC, useEffect } from 'react';
+import { FC, useEffect } from "react";
 
-import getIngredientsForDays from '../../utils/getIngredientsForDays';
-import calculateIngredients from '../../utils/calculateIngredients';
-import sortListByCategory from '../../utils/sortListByCategory';
-import { categoriesByModificator } from '../../lists';
+import getIngredientsForDays from "../../utils/getIngredientsForDays";
+import calculateIngredients from "../../utils/calculateIngredients";
+import sortListByCategory from "../../utils/sortListByCategory";
+import { categoriesByModificator } from "../../lists";
 
-import List from '../List';
+import List from "../List";
 
-import { ListsProps } from './Lists.types';
-import { Select } from '@gravity-ui/uikit';
-import { useLocalStorage } from 'react-use';
-import { Category } from '../../products';
+import { ListsProps } from "./Lists.types";
+import { Select } from "@gravity-ui/uikit";
+import { useLocalStorage } from "react-use";
+import { Category } from "../../products";
 
 const Lists: FC<ListsProps> = ({ lists, daysMenu }) => {
-  const [listId, setListId] = useLocalStorage('listId', String(lists[0].id));
+  const [listId, setListId] = useLocalStorage("listId", String(lists[0].id));
   const [selectedCategory, setSelectedCategory] = useLocalStorage(
-    'category',
+    "category",
     Category.EggsAndMilk
   );
 
@@ -28,6 +28,7 @@ const Lists: FC<ListsProps> = ({ lists, daysMenu }) => {
   const sortedIngredients = sortListByCategory(ingredients, [
     selectedCategory ?? Category.EggsAndMilk,
   ]);
+  console.log(sortedIngredients);
 
   useEffect(() => {
     if (selectedCategory && !allowedCategories.includes(selectedCategory)) {
@@ -39,11 +40,11 @@ const Lists: FC<ListsProps> = ({ lists, daysMenu }) => {
     <>
       <div
         style={{
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '12px',
-          marginBottom: '16px',
-          minWidth: '350px',
+          display: "flex",
+          flexDirection: "column",
+          gap: "12px",
+          marginBottom: "16px",
+          minWidth: "350px",
         }}
       >
         <Select
@@ -55,7 +56,7 @@ const Lists: FC<ListsProps> = ({ lists, daysMenu }) => {
               content: listItem.name,
             })),
           ]}
-          popupWidth={'fit'}
+          popupWidth={"fit"}
           onUpdate={(value) => setListId(value[0])}
         />
         <Select
