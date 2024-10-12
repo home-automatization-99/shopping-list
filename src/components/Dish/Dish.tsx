@@ -29,6 +29,7 @@ const Dish: FC<DishProps> = ({ dish }) => {
             </p>
           );
         })}
+        <pre>{dish.recipe}</pre>
       </div>
       {dish.imagePath && <img src={dish.imagePath} width={350} />}
     </div>

@@ -8,7 +8,7 @@ const Dishes = () => {
   return dishes.map((dish) => (
     <details style={{ marginBottom: "8px" }}>
       <summary>
-        {dish.name} <Label size="xs">{dish.calories} ккал</Label>
+        #{dish.id} {dish.name} <Label size="xs">{dish.calories} ккал</Label>
       </summary>
       <Dish dish={dish} key={dish.id} />
     </details>

@@ -24,6 +24,7 @@ export interface Dish {
   ingredients: ProductWithQuantity[];
   calories: number;
   imagePath?: string;
+  recipe?: string;
 }
 
 export interface ProductWithQuantity {
@@ -1132,6 +1133,7 @@ export const dishes: Dish[] = [
       { productId: 7, quantity: 5 },
       { productId: 54, quantity: 100 },
       { productId: 88, quantity: 10 },
+      { productId: 6, quantity: 30 },
     ],
   },
   {
@@ -1142,5 +1144,79 @@ export const dishes: Dish[] = [
       { productId: 1, quantity: 2 },
       { productId: 89, quantity: 150 },
     ],
+  },
+  {
+    id: 23,
+    name: "Teriyaki Maggi",
+    calories: 300,
+    ingredients: [
+      { productId: 39, quantity: 50 },
+      { productId: 57, quantity: 100 },
+      { productId: 47, quantity: 1 },
+      { productId: 15, quantity: 0.5 },
+      { productId: 90, quantity: 0.5 },
+    ],
+  },
+  {
+    id: 24,
+    name: "Tikka Masala Maggi",
+    calories: 470,
+    ingredients: [
+      { productId: 39, quantity: 50 },
+      { productId: 57, quantity: 150 },
+      { productId: 30, quantity: 200 },
+      { productId: 91, quantity: 50 },
+      { productId: 92, quantity: 0.5 },
+    ],
+  },
+  {
+    id: 25,
+    name: "Паштет куриный",
+    calories: 430,
+    ingredients: [
+      { productId: 12, quantity: 0.25 },
+      { productId: 13, quantity: 0.25 },
+      { productId: 27, quantity: 1 },
+      { productId: 93, quantity: 100 },
+      { productId: 94, quantity: 4 },
+    ],
+    recipe: `1. Лук очистить и нарезать полукольцами.
+    Морковь очистить и нарезать кружочками.
+    В глубокой сковороде или сотейнике разогреть растительное масло, добавить овощи 
+    и обжарить до мягкости в течение 5-7 минут.
+    Постоянно помешивать овощи и стараться, чтобы они не пригорали.
+
+    2. Куриную печень очистить от сосудов, жилок, печёночных узлов и остатков жировых тканей.
+    Жарить, постоянно помешивая, в течение 3-5 минут на среднем огне, пока печень не начнёт менять свой цвет.
+    Влить на сковороду воду, добавить соль, перец, по желанию, лавровый лист и другие специи, 
+    накрыть сковороду крышкой и тушить на минимальном огне в течение 20-ти минут.
+    Спустя время снять крышку и протушить еще минут 5-10 минут, пока жидкость почти не выпарится.
+
+    3. Выложить полученную массу в глубокую миску.
+    Добавить мягкое сливочное масло.
+    Важно, чтобы масло было мягким, но не растопленным.
+    Взбить с помощью блендера до однородной консистенции.
+    Хранить в холодильнике до 7-ми дней.`,
+  },
+  {
+    id: 26,
+    name: "Паста Болоньезе",
+    calories: 600,
+    ingredients: [
+      { productId: 12, quantity: 0.2 },
+      { productId: 13, quantity: 0.2 },
+      { productId: 95, quantity: 110 },
+      { productId: 96, quantity: 100 },
+      { productId: 97, quantity: 75 },
+      { productId: 21, quantity: 1 },
+      { productId: 83, quantity: 20 },
+    ],
+    recipe: `Обжарить на оливковом масле мелко нарезанные лук и морковь.
+    Добавить фарш, обжаривать помешивая пока он полностью не поменяет цвет.
+    Сбрызнуть вином и выпарить алкоголь на большом огне.
+    Добавить томатную пассату, посолить, поперчить, перемешать, накрыть крышкой и оставить на маленьком огне на 2 часа.
+    Перемешать, снова накрыть крышкой и довести до готовности.
+    В кипящей подсоленной воде отварить пасту «аль денте». Перемешать с рагу.
+    При подаче по желанию посыпать тертым сыром.`,
   },
 ];

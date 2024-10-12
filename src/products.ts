@@ -17,6 +17,7 @@ export enum Category {
   Greens = "Зелень",
   Cans = "Консервы",
   Fish = "Рыба",
+  Bread = "Хлеб",
 }
 
 export const products: Product[] = [
@@ -354,7 +355,7 @@ export const products: Product[] = [
   {
     id: 56,
     name: "Тортилья",
-    category: Category.Cereal,
+    category: Category.Bread,
     unit: "шт",
   },
   {
@@ -548,5 +549,53 @@ export const products: Product[] = [
     name: "Сладкий йогурт",
     category: Category.EggsAndMilk,
     unit: "г",
+  },
+  {
+    id: 90,
+    name: "Соус Терияки Maggi",
+    category: Category.Spices,
+    unit: "шт",
+  },
+  {
+    id: 91,
+    name: "Сливки",
+    category: Category.EggsAndMilk,
+    unit: "мл",
+  },
+  {
+    id: 92,
+    name: "Соус Tikka Masala Maggi",
+    category: Category.Spices,
+    unit: "шт",
+  },
+  {
+    id: 93,
+    name: "Печень куриная",
+    category: Category.Meat,
+    unit: "г",
+  },
+  {
+    id: 94,
+    name: "Интегральные сухари",
+    category: Category.Bread,
+    unit: "шт",
+  },
+  {
+    id: 95,
+    name: "Фарш свинина/говядина",
+    category: Category.Meat,
+    unit: "г",
+  },
+  {
+    id: 96,
+    name: "Паста",
+    category: Category.Cereal,
+    unit: "г",
+  },
+  {
+    id: 97,
+    name: "Томатная паста",
+    category: Category.Cans,
+    unit: "мл",
   },
 ];

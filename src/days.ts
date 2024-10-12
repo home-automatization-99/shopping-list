@@ -191,4 +191,54 @@ const daysMenu3: DayMenu[] = [
   },
 ];
 
-export const daysMenu = daysMenu3 || daysMenu2 || daysMenu1;
+const daysMenu4: DayMenu[] = [
+  {
+    day: Day.Sunday,
+    dishes: [
+      { dishId: 1, quantity: 2 },
+      { dishId: 25, quantity: 2 },
+      { dishId: 8, quantity: 2 },
+    ],
+  },
+  {
+    day: Day.Monday,
+    dishes: [
+      { dishId: 4, quantity: 2 },
+      { dishId: 25, quantity: 2, fromFridge: true },
+      { dishId: 23, quantity: 2 },
+    ],
+  },
+  {
+    day: Day.Tuesday,
+    dishes: [
+      { dishId: 21, quantity: 2 },
+      { dishId: 25, quantity: 1, fromFridge: true },
+      { dishId: 26, quantity: 2 },
+    ],
+  },
+  {
+    day: Day.Wednesday,
+    dishes: [
+      { dishId: 22, quantity: 2 },
+      { dishId: 24, quantity: 2 },
+      { dishId: 26, quantity: 2, fromFridge: true },
+    ],
+  },
+  {
+    day: Day.Thursday,
+    dishes: [
+      { dishId: 4, quantity: 2 },
+      { dishId: 25, quantity: 1, fromFridge: true },
+      { dishId: 20, quantity: 2 },
+    ],
+  },
+  {
+    day: Day.Friday,
+    dishes: [
+      { dishId: 21, quantity: 2 },
+      { dishId: 20, quantity: 2, fromFridge: true },
+    ],
+  },
+];
+
+export const daysMenu = daysMenu4 || daysMenu3 || daysMenu2 || daysMenu1;

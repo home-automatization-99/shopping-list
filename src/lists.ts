@@ -66,4 +66,10 @@ export const lists = [
     days: [Day.Friday, Day.Saturday, Day.Sunday],
     modificator: ListModificator.Perishable,
   },
+  {
+    id: 6,
+    name: "На воскресенье",
+    days: [Day.Sunday],
+    modificator: ListModificator.All,
+  },
 ];
