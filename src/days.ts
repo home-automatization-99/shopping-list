@@ -282,5 +282,54 @@ const daysMenu5: DayMenu[] = [
   },
 ];
 
+const daysMenu6: DayMenu[] = [
+  {
+    day: Day.Saturday,
+    dishes: [{ dishId: 24, quantity: 2 }],
+  },
+  {
+    day: Day.Sunday,
+    dishes: [{ dishId: 25, quantity: 10 }],
+  },
+  {
+    day: Day.Monday,
+    dishes: [
+      { dishId: 4, quantity: 2 },
+      { dishId: 20, quantity: 2 },
+    ],
+  },
+  {
+    day: Day.Tuesday,
+    dishes: [
+      { dishId: 21, quantity: 2 },
+      { dishId: 20, quantity: 1, fromFridge: true },
+      { dishId: 26, quantity: 2 },
+    ],
+  },
+  {
+    day: Day.Wednesday,
+    dishes: [
+      { dishId: 22, quantity: 2 },
+      { dishId: 26, quantity: 2, fromFridge: true },
+      { dishId: 20, quantity: 2, fromFridge: true },
+    ],
+  },
+  {
+    day: Day.Thursday,
+    dishes: [
+      { dishId: 4, quantity: 2 },
+      { dishId: 26, quantity: 2, fromFridge: true },
+      { dishId: 5, quantity: 2 },
+    ],
+  },
+  {
+    day: Day.Friday,
+    dishes: [
+      { dishId: 21, quantity: 2 },
+      { dishId: 5, quantity: 2, fromFridge: true },
+    ],
+  },
+];
+
 export const daysMenu =
-  daysMenu5 || daysMenu4 || daysMenu3 || daysMenu2 || daysMenu1;
+  daysMenu6 || daysMenu5 || daysMenu4 || daysMenu3 || daysMenu2 || daysMenu1;

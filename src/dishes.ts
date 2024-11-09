@@ -200,7 +200,7 @@ export const dishes: Dish[] = [
       },
       {
         productId: 25, // Помидор
-        quantity: 2,
+        quantity: 0.5,
         unit: "шт",
       },
       {
@@ -1131,7 +1131,7 @@ export const dishes: Dish[] = [
     calories: 290,
     ingredients: [
       { productId: 7, quantity: 5 },
-      { productId: 54, quantity: 100 },
+      { productId: 54, quantity: 200 },
       { productId: 88, quantity: 10 },
       { productId: 6, quantity: 30 },
     ],
@@ -1163,7 +1163,7 @@ export const dishes: Dish[] = [
     calories: 470,
     ingredients: [
       { productId: 39, quantity: 50 },
-      { productId: 57, quantity: 150 },
+      { productId: 57, quantity: 1 },
       { productId: 30, quantity: 200 },
       { productId: 91, quantity: 50 },
       { productId: 92, quantity: 0.5 },
@@ -1174,8 +1174,8 @@ export const dishes: Dish[] = [
     name: "Паштет куриный",
     calories: 430,
     ingredients: [
-      { productId: 12, quantity: 0.25 },
-      { productId: 13, quantity: 0.25 },
+      { productId: 12, quantity: 1 },
+      { productId: 13, quantity: 1 },
       { productId: 27, quantity: 1 },
       { productId: 93, quantity: 100 },
       { productId: 94, quantity: 4 },

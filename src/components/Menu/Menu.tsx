@@ -14,6 +14,18 @@ const Menu: FC<MenuProps> = ({ daysMenu }) => {
         dishes.find((item) => item.id === dish.dishId)?.calories ?? 0;
       return acc + calories;
     }, 0);
+    const dishQuantityMap: Record<number, number> = {};
+    daysMenu.forEach((day) => {
+      day.dishes.forEach((dish) => {
+        const countedQauntity = dishQuantityMap[dish.dishId];
+        if (!countedQauntity) {
+          dishQuantityMap[dish.dishId] = dish.quantity;
+        }
+        if (countedQauntity > 0 && dish.fromFridge) {
+          dishQuantityMap[dish.dishId] = countedQauntity + dish.quantity;
+        }
+      });
+    });
     return (
       <div key={day.day}>
         <h2>
@@ -49,11 +61,13 @@ const Menu: FC<MenuProps> = ({ daysMenu }) => {
                 </div>
               );
             }
+            const needCookQuantity = dishQuantityMap[dishInMenu.dishId];
             return (
               <div key={dishInMenu.dishId} style={{ marginBottom: "4px" }}>
                 <details>
                   <summary style={{ cursor: "pointer" }}>{title}</summary>
-                  <Dish dish={dish} />
+                  Нужно приготовить: {needCookQuantity}
+                  <Dish dish={dish} quantity={needCookQuantity} />
                 </details>
               </div>
             );

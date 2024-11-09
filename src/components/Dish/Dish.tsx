@@ -4,7 +4,7 @@ import { products } from "../../products";
 
 import { DishProps } from "./Dish.types";
 
-const Dish: FC<DishProps> = ({ dish }) => {
+const Dish: FC<DishProps> = ({ dish, quantity = 1 }) => {
   return (
     <div
       style={{
@@ -24,8 +24,11 @@ const Dish: FC<DishProps> = ({ dish }) => {
           if (!product) return;
           return (
             <p key={ingredient.productId}>
-              {product.name}, {product.unit} - {ingredient.quantity}{" "}
-              {ingredient.unit}
+              {`${product.name} - ${ingredient.quantity} ${
+                product.unit
+              } * ${quantity} = ${ingredient.quantity * quantity} ${
+                product.unit
+              }`}
             </p>
           );
         })}
