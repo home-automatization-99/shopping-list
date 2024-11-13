@@ -32,7 +32,7 @@ const Dish: FC<DishProps> = ({ dish, quantity = 1 }) => {
             </p>
           );
         })}
-        <pre>{dish.recipe}</pre>
+        <p>{dish.recipe}</p>
       </div>
       {dish.imagePath && <img src={dish.imagePath} width={350} />}
     </div>
