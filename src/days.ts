@@ -331,5 +331,50 @@ const daysMenu6: DayMenu[] = [
   },
 ];
 
+const daysMenu7: DayMenu[] = [
+  {
+    day: Day.Monday,
+    dishes: [
+      { dishId: 22, quantity: 2 },
+      { dishId: 26, quantity: 2 },
+    ],
+  },
+  {
+    day: Day.Tuesday,
+    dishes: [
+      { dishId: 21, quantity: 2 },
+      { dishId: 26, quantity: 2, fromFridge: true },
+    ],
+  },
+  {
+    day: Day.Wednesday,
+    dishes: [
+      { dishId: 22, quantity: 2 },
+      { dishId: 2, quantity: 1 },
+      { dishId: 2, quantity: 2, fromFridge: true },
+    ],
+  },
+  {
+    day: Day.Thursday,
+    dishes: [
+      { dishId: 21, quantity: 2 },
+      { dishId: 2, quantity: 2, fromFridge: true },
+    ],
+  },
+  {
+    day: Day.Friday,
+    dishes: [
+      { dishId: 22, quantity: 2 },
+      { dishId: 2, quantity: 2, fromFridge: true },
+    ],
+  },
+];
+
 export const daysMenu =
-  daysMenu6 || daysMenu5 || daysMenu4 || daysMenu3 || daysMenu2 || daysMenu1;
+  daysMenu7 ||
+  daysMenu6 ||
+  daysMenu5 ||
+  daysMenu4 ||
+  daysMenu3 ||
+  daysMenu2 ||
+  daysMenu1;
